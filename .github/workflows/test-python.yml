@@ -23,7 +23,7 @@ jobs:
 
     - name: install dependencies
       run: |
-        python3 -m pip install --upgrade pip
+        python3 -m pipx install --upgrade pipx
         pipx install -r requirements.txt
         
     - name: run test
