@@ -3,15 +3,15 @@ name: Python Flask App
 on:
   push:
     branches:
-      master
+      main
 
   pull__request:
     branches:
-      master
+      main
 
 jobs:
   build:
-    runs-on: ubuntu:latest
+    runs-on: ubuntu-latest
     steps:
     - name: checkout code
       uses: actions/checkout@v3
