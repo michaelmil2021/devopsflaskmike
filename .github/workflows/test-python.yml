@@ -25,7 +25,7 @@ jobs:
       run: |
         python3 -m pip install --upgrade pip
         pip install -r requirements.txt
-
+        
     - name: run test
       run: |
         pytest
@@ -36,7 +36,7 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H ${{ secrets.EC2_PUBLIC_IP }} >> ~/.ssh/known_hosts
 
-      - name: Run SSH commands on EC2
+        - name: Run SSH commands on EC2
         run: |
           ssh ec2-user@${{ secrets.EC2_PUBLIC_IP }} << 'EOF'
             echo "Connected to EC2"
